@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Intern</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<script>
+async function loadCV(role = "backend") {
+    const res = await fetch("data.json");
+    const data = await res.json();
+
+    // Thông tin cá nhân
+    document.querySelector(".h1text").textContent = data.thong_tin.ten;
+    document.querySelector(".h2text").textContent = "THỰC TẬP SINH " + role.toUpperCase();
+
+    // Liên lạc
+    document.querySelector("#lien_lac").innerHTML = `
+        <p style="color: #adc6de;"><i class="fa-solid fa-phone" style="padding-right: 5px; color:#adc6de;"></i> ${data.thong_tin.sdt}</p>
+        <p style="color: #adc6de;"><i class="fa-solid fa-envelope" style="padding-right: 5px; color:#adc6de;"></i> ${data.thong_tin.email}</p>
+        <p style="color: #adc6de;"><i class="fa-brands fa-github" style="padding-right: 8px; color:#adc6de;"></i>${data.thong_tin.github}</p>
+        <p style="color: #adc6de;">
+            <i class="fa-solid fa-globe" style="padding-right: 5px; color: #adc6de;"></i>
+            <a href="${data.thong_tin.website}" target="_blank" style="color: #adc6de; text-decoration: none;">${data.thong_tin.website}</a>
+        </p>
+        <p style="color: #adc6de;"><i class="fa-solid fa-cake-candles" style="padding-right: 5px; color:#adc6de;"></i> ${data.thong_tin.ngay_sinh}</p>
+        <p style="color: #adc6de;"><i class="fa-solid fa-location-dot" style="padding-right: 5px; color:#adc6de;"></i> ${data.thong_tin.dia_chi}</p>
+    `;
+
+    // Học vấn
+    document.querySelector("#hoc_van").innerHTML = `
+        <p style="margin-bottom: 1px; color: #adc6de;">${data.hoc_van.nam}</p>
+        <p style="margin-top: 5px; margin-bottom: 5px;">${data.hoc_van.truong}</p>
+        <ul style="line-height: 1.8; margin-top: 0; color: #adc6de;">
+            <li>${data.hoc_van.nam_hoc}</li>
+            <li><b>GPA: ${data.hoc_van.gpa}</b></li>
+            <li>Chuyên ngành ${data.hoc_van.chuyen_nganh}</li>
+        </ul>
+    `;
+
+    // Kỹ năng
+    document.querySelector("#ky_nang_lap_trinh").innerHTML = `<li>Kỹ năng lập trình: ${data.ky_nang.lap_trinh.join(', ')}.</li>`;
+    document.querySelector("#ky_nang_mem").innerHTML = `<li>Kỹ năng mềm: ${data.ky_nang.mem.join(', ')}.</li>`;
+    document.querySelector("#ky_nang_cong_cu").innerHTML = `<li>Công cụ: ${data.ky_nang.cong_cu.join(', ')}.</li>`;
+
+    // Ngoại ngữ
+    document.querySelector("#ngoai_ngu").innerHTML = `<li>${data.ngoai_ngu}</li>`;
+
+    // Mục tiêu nghề nghiệp
+    document.querySelector("#muc_tieu").textContent = data.muc_tieu[role];
+
+    // Dự án
+    let duAnHTML = "";
+    data.du_an.forEach((d, i) => {
+        duAnHTML += `
+      <div class="duan-item">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <p style="margin: 0;"><b>${i+1}. ${d.ten}</b></p>
+            <span style="color: gray; font-size: 13px; margin-left: 20px;">${d.thoi_gian}</span>
+        </div>
+        <p>- Ngôn ngữ/công cụ sử dụng: <b style="color:#2b4a6f">${d.cong_nghe}</b></p>
+        <p><i>Tóm tắt:</i> ${d.tom_tat}</p>
+        <p>- Mô tả:</p>
+        <ul style="line-height: 1.6; margin-top: 0; margin-bottom: 8px;">
+            ${d.mo_ta.map(m => `<li>${m}</li>`).join('')}
+        </ul>
+        <p>- Kết quả:</p>
+        <ul style="line-height: 1.6; margin-top: 0;">
+            ${d.ket_qua.map(k => `<li>${k}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+    });
+    document.querySelector("#du_an").innerHTML = duAnHTML;
+}
+
+// Gọi mặc định Backend
+window.onload = function() {
+    loadCV("data");
+};
+</script>
+
+<body>
+    <div class="All">
+        <!-- Bên trái-->
+        <div class="left">
+            <img class="Anh" src="img/avt.png" alt="Ảnh vippro">
+            <div class="info">
+                <h3 class="h4text">Liên lạc</h3>
+                <hr>
+                <div id="lien_lac"></div>
+
+                <h3 class="h4text">Học vấn</h3>
+                <hr>
+                <div id="hoc_van"></div>
+
+                <h3 class="h4text">Kỹ năng</h3>
+                <hr>
+                <ul id="ky_nang_lap_trinh" class="color"></ul>
+                <ul id="ky_nang_mem" class="color"></ul>
+                <ul id="ky_nang_cong_cu" class="color"></ul>
+
+                <h3 class="h4text">Ngoại ngữ</h3>
+                <hr>
+                <ul id="ngoai_ngu" class="color"></ul>
+            </div>
+        </div>
+
+        <!-- Bên phải-->
+        <div class="top_right">
+            <h1 class="h1text"></h1>
+            <h2 class="h2text" style="font-weight: normal;"></h2>
+            <div class="mid_right">
+                <h2 class="h2text">MỤC TIÊU NGHỀ NGHIỆP</h2>
+                <hr style="border: 1px solid #000;">
+                <p id="muc_tieu" style="text-align: justify; font-size: 12px; margin-bottom: 10px; line-height: 1.2;"></p>
+
+                <h2 class="h2text">KINH NGHIỆM THỰC TẾ/DỰ ÁN CÁ NHÂN</h2>
+                <hr style="border: 1px solid #000;">
+                <div id="du_an"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

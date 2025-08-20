@@ -1,0 +1,77 @@
+{
+  "thong_tin": {
+    "ten": "TRẦN NGUYỄN THỤY NHÂN",
+    "ngay_sinh": "07/03/2005",
+    "sdt": "0965 027 644",
+    "email": "2005thuynhan@gmail.com",
+    "github": "https://github.com/ThuyNhanVP",
+    "website": "https://thuynhanvp.github.io",
+    "dia_chi": "294 Dương Văn Bé, Hai Bà Trưng, Hà Nội"
+  },
+  "hoc_van": {
+    "truong": "Trường Đại học Kinh Doanh và Công Nghệ Hà Nội",
+    "nam": "2023 - hiện tại",
+    "gpa": "3.5",
+    "chuyen_nganh": "Công nghệ thông tin",
+    "nam_hoc": "Sinh viên năm 3"
+  },
+  "muc_tieu": {
+    "backend": "Ứng tuyển vị trí Thực tập Backend với định hướng PHP/Laravel và SQL Server. Tôi đã có dự án quản lý sách sử dụng VB.net + SQL và một ứng dụng web với PHP + MySQL. Mong muốn rèn luyện kỹ năng thiết kế API, tối ưu truy vấn SQL, đồng thời học thêm C#/.NET để mở rộng sang hệ thống doanh nghiệp.",
+    "frontend": "Ứng tuyển vị trí Thực tập Frontend, rèn luyện kỹ năng HTML, CSS, JavaScript và React.",
+    "data": "Ứng tuyển vị trí Thực tập Data Engineer với định hướng xây dựng và tối ưu hệ thống dữ liệu. Tôi có nền tảng SQL (JOIN, Stored Procedure) và từng làm dự án lưu trữ dữ liệu bằng MySQL. Mong muốn học thêm ETL (SSIS/Airflow) và tìm hiểu mô hình Data Warehouse để hỗ trợ phân tích dữ liệu trong doanh nghiệp."
+  },
+  "ky_nang": {
+    "lap_trinh": ["C++", "HTML", "CSS", "PHP", "VB.net", "Winform", "SQL"],
+    "mem": ["Tư duy logic", "Làm việc nhóm", "OOP", "CTDL-GT"],
+    "cong_cu": ["Visual Studio", "Github", "VSCode", "MySQL"]
+  },
+  "ngoai_ngu": "Tiếng Anh trung cấp",
+  "du_an": [
+    {
+      "ten": "Form Đăng ký/Đăng nhập & Hệ thống đo nồng độ cồn",
+      "thoi_gian": "03/2025 – 05/2025",
+      "cong_nghe": "HTML, CSS, javascript, PHP, MySQL, VSCode",
+      "tom_tat": "Website đăng ký/đăng nhập, đo nồng độ cồn và cảnh báo mức phạt.",
+      "mo_ta": [
+        "Phát triển website đăng ký/đăng nhập người dùng",
+        "Xây dựng chức năng nhập liệu mức nồng độ cồn, hiển thị cảnh báo mức phạt",
+        "Dữ liệu được lưu trữ và truy vấn từ MySQL"
+      ],
+      "ket_qua": [
+        "Xây dựng ứng dụng web hoàn chỉnh",
+        "Triển khai ứng dụng lên free hosting",
+        "Nâng cao tư duy phân tích yêu cầu và backend logic"
+      ]
+    },
+    {
+      "ten": "Quản lý Kho Hàng",
+      "thoi_gian": "03/2024 – 05/2024",
+      "cong_nghe": "C++, Visual Studio",
+      "tom_tat": "Phần mềm quản lý kho hàng, lưu trữ và xử lý dữ liệu sản phẩm.",
+      "mo_ta": [
+        "Ứng dụng quản lý kho hàng",
+        "Lưu dữ liệu ra file .txt",
+        "Chức năng CRUD + sắp xếp dữ liệu"
+      ],
+      "ket_qua": [
+        "Hiểu về danh sách lưu trữ trong C++",
+        "Hoàn thiện ứng dụng cơ bản"
+      ]
+    },
+    {
+      "ten": "Quản lý Tiệm Sách",
+      "thoi_gian": "03/2024 – 05/2024",
+      "cong_nghe": "VB.net, Winform, SQL Server, Visual Studio",
+      "tom_tat": "Ứng dụng quản lý tiệm sách, hỗ trợ đăng nhập và thao tác dữ liệu.",
+      "mo_ta": [
+        "Xây dựng ứng dụng quản lý tiệm sách",
+        "Thêm, sửa, xóa thông tin trong bảng dữ liệu",
+        "Form đăng nhập, đăng ký, quên mật khẩu"
+      ],
+      "ket_qua": [
+        "Kết nối ứng dụng với cơ sở dữ liệu SQL",
+        "Hoàn thiện ứng dụng với các chức năng cơ bản"
+      ]
+    }
+  ]
+}
