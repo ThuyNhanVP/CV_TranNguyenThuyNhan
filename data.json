@@ -1,17 +1,17 @@
 {
   "thong_tin": {
     "ten": "TRẦN NGUYỄN THỤY NHÂN",
-    "ngay_sinh": "07/03/2005",
-    "sdt": "0965 027 644",
-    "email": "2005thuynhan@gmail.com",
+    "ngay_sinh": "",//
+    "sdt": "",//
+    "email": "",//
     "github": "https://github.com/ThuyNhanVP",
     "website": "https://thuynhanvp.github.io",
-    "dia_chi": "294 Dương Văn Bé, Hai Bà Trưng, Hà Nội"
+    "dia_chi": ""//
   },
   "hoc_van": {
-    "truong": "Trường Đại học Kinh Doanh và Công Nghệ Hà Nội",
+    "truong": "",//
     "nam": "2023 - hiện tại",
-    "gpa": "3.5",
+    "gpa": "3.55",
     "chuyen_nganh": "Công nghệ thông tin",
     "nam_hoc": "Sinh viên năm 3"
   },
